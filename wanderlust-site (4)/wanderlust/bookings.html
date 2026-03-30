@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Trip — WanderLust Travel</title>
+  <meta name="description" content="Book your dream vacation with WanderLust. Simple booking, best prices, secure payment." />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>body { font-family: 'Inter', 'Segoe UI', sans-serif; }</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <span class="brand-name">Wander<span class="brand-accent">Lust</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/destinations.html">Destinations</a></li>
+      <li><a href="/bookings.html" class="active">Bookings</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/bookings.html" class="btn-nav active">Book Now</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu">
+    <a href="/">Home</a>
+    <a href="/destinations.html">Destinations</a>
+    <a href="/tickets.html">My Tickets</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/bookings.html" class="btn-mobile">Book Now</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="/">Home</a> / <span>Book a Trip</span></div>
+    <h1>🧳 Book Your Trip</h1>
+    <p>Complete your booking in just 2 simple steps. Secure, fast and hassle-free.</p>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<div class="booking-wrapper">
+
+  <!-- Progress -->
+  <div class="progress-bar">
+    <div class="progress-step">
+      <div class="step-circle active" id="circle1">1</div>
+      <div class="step-label active" id="label1">Trip Details</div>
+    </div>
+    <div class="step-connector" id="connector1"></div>
+    <div class="progress-step">
+      <div class="step-circle" id="circle2">2</div>
+      <div class="step-label" id="label2">Confirm &amp; Pay</div>
+    </div>
+  </div>
+
+  <!-- STEP 1 -->
+  <div id="step1" class="booking-card">
+    <h2>Trip Details</h2>
+
+    <div class="form-group">
+      <label for="destination">Destination</label>
+      <select id="destination" class="form-control" data-testid="select-destination">
+        <option value="">— Choose a destination —</option>
+        <option value="bali">Bali, Indonesia — $89/night</option>
+        <option value="paris">Paris, France — $149/night</option>
+        <option value="tokyo">Tokyo, Japan — $129/night</option>
+        <option value="santorini">Santorini, Greece — $199/night</option>
+        <option value="newyork">New York, USA — $179/night</option>
+        <option value="maldives">Maldives — $299/night</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="checkin">Check-in Date</label>
+        <input type="date" id="checkin" class="form-control" data-testid="input-checkin" />
+      </div>
+      <div class="form-group">
+        <label for="checkout">Check-out Date</label>
+        <input type="date" id="checkout" class="form-control" data-testid="input-checkout" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="guests">Number of Guests</label>
+      <select id="guests" class="form-control" data-testid="select-guests">
+        <option value="1">1 Guest</option>
+        <option value="2">2 Guests</option>
+        <option value="3">3 Guests</option>
+        <option value="4">4 Guests</option>
+        <option value="5">5+ Guests</option>
+      </select>
+    </div>
+
+    <!-- Price Summary -->
+    <div class="price-summary" id="priceSummary" style="display:none">
+      <div class="price-row">
+        <span class="label">Room rate</span>
+        <span class="value" id="priceNights">—</span>
+      </div>
+      <div class="price-row">
+        <span class="label">Subtotal</span>
+        <span class="value" id="priceSubtotal">—</span>
+      </div>
+      <div class="price-row">
+        <span class="label">Taxes &amp; fees (12%)</span>
+        <span class="value" id="priceTaxes">—</span>
+      </div>
+      <div class="price-row price-total">
+        <span class="label">Total</span>
+        <span class="value" id="priceTotal">—</span>
+      </div>
+    </div>
+
+    <!-- Payment Agreement -->
+    <div class="payment-box" id="paymentBox">
+      <label class="checkbox-group">
+        <input type="checkbox" id="paymentAgreement" data-testid="checkbox-payment" />
+        <span class="checkbox-label">
+          <strong>I agree to the payment terms &amp; cancellation policy.</strong><br>
+          By checking this box, I confirm I have read and agree to the WanderLust booking terms, including the payment schedule and refund policy. I authorize the total charge upon booking confirmation.
+        </span>
+      </label>
+      <div class="payment-warning hidden" id="payWarning">
+        ⚠️ You must agree to the payment terms to continue.
+      </div>
+    </div>
+
+    <button class="btn btn-primary btn-lg" id="continueBtn" data-testid="button-continue" disabled style="width:100%;justify-content:center;margin-top:8px;">
+      Continue to Review →
+    </button>
+  </div>
+
+  <!-- STEP 2 -->
+  <div id="step2" class="booking-card hidden" style="display:none">
+    <h2>Confirm &amp; Pay</h2>
+
+    <!-- Booking Summary -->
+    <div class="summary-card">
+      <h3>📋 Booking Summary</h3>
+      <div class="summary-item"><span class="s-label">Destination</span><span class="s-value" id="sum-dest">—</span></div>
+      <div class="summary-item"><span class="s-label">Check-in</span><span class="s-value" id="sum-checkin">—</span></div>
+      <div class="summary-item"><span class="s-label">Check-out</span><span class="s-value" id="sum-checkout">—</span></div>
+      <div class="summary-item"><span class="s-label">Duration</span><span class="s-value" id="sum-nights">—</span></div>
+      <div class="summary-item"><span class="s-label">Guests</span><span class="s-value" id="sum-guests">—</span></div>
+      <div class="summary-item"><span class="s-label">Subtotal</span><span class="s-value" id="sum-subtotal">—</span></div>
+      <div class="summary-item"><span class="s-label">Taxes &amp; fees</span><span class="s-value" id="sum-taxes">—</span></div>
+      <div class="summary-total">
+        <span class="s-label">Total Amount</span>
+        <span class="s-value" id="sum-total">—</span>
+      </div>
+    </div>
+
+    <!-- Netlify Booking Form — admin email configured in Netlify dashboard, NOT visible here -->
+    <form id="bookingForm" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="booking" />
+      <p class="hidden" style="display:none"><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
+      <input type="hidden" name="destination" id="f-destination" />
+      <input type="hidden" name="checkin" id="f-checkin" />
+      <input type="hidden" name="checkout" id="f-checkout" />
+      <input type="hidden" name="guests" id="f-guests" />
+      <input type="hidden" name="nights" id="f-nights" />
+      <input type="hidden" name="total-price" id="f-price" />
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="guestName">Full Name</label>
+          <input type="text" id="guestName" name="guest-name" class="form-control" placeholder="Your full name" required data-testid="input-name" />
+        </div>
+        <div class="form-group">
+          <label for="guestEmail">Email Address</label>
+          <input type="email" id="guestEmail" name="guest-email" class="form-control" placeholder="you@example.com" required data-testid="input-email" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="specialReqs">Special Requests (optional)</label>
+        <textarea id="specialReqs" name="special-requests" class="form-control" rows="3" placeholder="Any dietary requirements, room preferences, accessibility needs..." style="resize:vertical;"></textarea>
+      </div>
+
+      <!-- Payment Details -->
+      <div style="margin-top:28px;margin-bottom:8px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
+          <div style="flex:1;height:1px;background:var(--gray-200);"></div>
+          <span style="font-size:.82rem;font-weight:700;color:var(--gray-400);text-transform:uppercase;letter-spacing:1px;white-space:nowrap;">🔒 Secure Payment</span>
+          <div style="flex:1;height:1px;background:var(--gray-200);"></div>
+        </div>
+
+        <div style="background:var(--off-white);border:1.5px solid var(--gray-200);border-radius:var(--radius-lg);padding:24px;">
+          <div style="display:flex;gap:10px;margin-bottom:16px;">
+            <img src="https://img.icons8.com/color/36/visa.png" alt="Visa" style="height:24px;">
+            <img src="https://img.icons8.com/color/36/mastercard.png" alt="Mastercard" style="height:24px;">
+            <img src="https://img.icons8.com/color/36/amex.png" alt="Amex" style="height:24px;">
+          </div>
+
+          <div class="form-group">
+            <label for="cardName">Cardholder Name</label>
+            <input type="text" id="cardName" class="form-control" placeholder="Name as on card" autocomplete="cc-name" />
+          </div>
+
+          <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cardExpiry">Expiry Date</label>
+              <input type="text" id="cardExpiry" class="form-control" placeholder="MM / YY" maxlength="7" autocomplete="cc-exp" />
+            </div>
+            <div class="form-group">
+              <label for="cardCvv">CVV</label>
+              <input type="text" id="cardCvv" class="form-control" placeholder="•••" maxlength="4" autocomplete="cc-csc" />
+            </div>
+          </div>
+
+          <div id="paymentError" style="display:none;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.3);border-radius:8px;padding:10px 14px;color:#b91c1c;font-size:.85rem;font-weight:600;margin-top:4px;">
+            ⚠️ Please fill in all payment details to complete your booking.
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;margin-top:20px;">
+        <button type="button" id="backBtn" class="btn btn-outline" style="flex:1;justify-content:center;">← Back</button>
+        <button type="submit" class="btn btn-primary btn-lg" data-testid="button-confirm" style="flex:2;justify-content:center;">🔒 Pay &amp; Confirm Booking</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<!-- SUCCESS OVERLAY -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-box">
+    <div class="success-icon">🎉</div>
+    <h2>Booking Confirmed!</h2>
+    <p>Your trip has been booked successfully. A confirmation has been sent to our team. View your ticket below!</p>
+    <button class="btn btn-primary btn-lg" onclick="closeSuccess()" style="width:100%;justify-content:center;">View My Tickets →</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Wander<span>Lust</span></h3>
+        <p>Making world travel accessible, affordable and unforgettable.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="/destinations.html">All Destinations</a>
+        <a href="/bookings.html">Book a Trip</a>
+        <a href="/tickets.html">My Tickets</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/contact.html">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="/contact.html">Help Centre</a>
+        <a href="#">FAQs</a>
+        <a href="#">Cancellations</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderLust. All rights reserved.</span>
+      <span>Made with ❤️ for explorers everywhere</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+<script>
+  // Auto-format card number with spaces
+  document.addEventListener('DOMContentLoaded', () => {
+    const cardNum = document.getElementById('cardNumber');
+    if (cardNum) {
+      cardNum.addEventListener('input', () => {
+        let v = cardNum.value.replace(/\D/g, '').substring(0, 16);
+        cardNum.value = v.replace(/(.{4})/g, '$1 ').trim();
+      });
+    }
+    const cardExp = document.getElementById('cardExpiry');
+    if (cardExp) {
+      cardExp.addEventListener('input', () => {
+        let v = cardExp.value.replace(/\D/g, '').substring(0, 4);
+        if (v.length >= 3) v = v.substring(0,2) + ' / ' + v.substring(2);
+        cardExp.value = v;
+      });
+    }
+    const cardCvv = document.getElementById('cardCvv');
+    if (cardCvv) {
+      cardCvv.addEventListener('input', () => {
+        cardCvv.value = cardCvv.value.replace(/\D/g, '').substring(0, 4);
+      });
+    }
+  });
+</script>
+</body>
+</html>

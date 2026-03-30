@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinations — WanderLust Travel</title>
+  <meta name="description" content="Browse 120+ handpicked travel destinations. Find your perfect getaway with WanderLust." />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>body { font-family: 'Inter', 'Segoe UI', sans-serif; }</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <span class="brand-name">Wander<span class="brand-accent">Lust</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/destinations.html" class="active">Destinations</a></li>
+      <li><a href="/bookings.html">Bookings</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/bookings.html" class="btn-nav">Book Now</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu">
+    <a href="/">Home</a>
+    <a href="/destinations.html">Destinations</a>
+    <a href="/tickets.html">My Tickets</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/bookings.html" class="btn-mobile">Book Now</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="/">Home</a> / <span>Destinations</span></div>
+    <h1>✈️ Explore Destinations</h1>
+    <p>Discover breathtaking locations around the world, handpicked by our travel experts for an unforgettable experience.</p>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">🌍 All</button>
+      <button class="filter-btn" data-filter="beach">🏖️ Beach</button>
+      <button class="filter-btn" data-filter="city">🏙️ City</button>
+      <button class="filter-btn" data-filter="europe">🏰 Europe</button>
+      <button class="filter-btn" data-filter="asia">🌸 Asia</button>
+    </div>
+    <div class="cards-grid" id="destGrid">
+      <!-- Populated by script.js -->
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2 class="cta-title">Can't Decide Where to Go?</h2>
+    <p class="cta-subtitle">Our travel experts are here to help you plan the perfect trip.</p>
+    <div class="cta-btns">
+      <a href="/bookings.html" class="btn btn-navy btn-lg">Book a Trip</a>
+      <a href="/contact.html" class="btn btn-outline btn-lg" style="border-color:var(--navy);color:var(--navy);">Talk to an Expert</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Wander<span>Lust</span></h3>
+        <p>Making world travel accessible, affordable and unforgettable. Your journey begins with us.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="/destinations.html">All Destinations</a>
+        <a href="/bookings.html">Book a Trip</a>
+        <a href="/tickets.html">My Tickets</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/contact.html">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <h4>Top Picks</h4>
+        <a href="/bookings.html?dest=bali">Bali</a>
+        <a href="/bookings.html?dest=paris">Paris</a>
+        <a href="/bookings.html?dest=tokyo">Tokyo</a>
+        <a href="/bookings.html?dest=maldives">Maldives</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderLust. All rights reserved.</span>
+      <span>Made with ❤️ for explorers everywhere</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>

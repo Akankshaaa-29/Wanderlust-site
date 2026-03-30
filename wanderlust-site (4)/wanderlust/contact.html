@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — WanderLust Travel</title>
+  <meta name="description" content="Get in touch with WanderLust's travel experts. We're here to help plan your perfect trip." />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>body { font-family: 'Inter', 'Segoe UI', sans-serif; }</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <span class="brand-name">Wander<span class="brand-accent">Lust</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/destinations.html">Destinations</a></li>
+      <li><a href="/bookings.html">Bookings</a></li>
+      <li><a href="/contact.html" class="active">Contact</a></li>
+      <li><a href="/bookings.html" class="btn-nav">Book Now</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu">
+    <a href="/">Home</a>
+    <a href="/destinations.html">Destinations</a>
+    <a href="/tickets.html">My Tickets</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/bookings.html" class="btn-mobile">Book Now</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="/">Home</a> / <span>Contact</span></div>
+    <h1>📬 Get In Touch</h1>
+    <p>Our travel experts are standing by. Use the form below and we'll get back to you within 24 hours.</p>
+  </div>
+</section>
+
+<!-- CONTACT CONTENT -->
+<section class="section">
+  <div class="contact-wrapper">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>We'd Love to Hear From You</h2>
+      <p>Whether you have questions about a destination, need help planning your itinerary, or want to make a special arrangement — we're here for you every step of the way.</p>
+
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <h4>Office Address</h4>
+          <p>123 Explorer Avenue, Suite 400<br>San Francisco, CA 94105, USA</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">⏰</div>
+        <div>
+          <h4>Business Hours</h4>
+          <p>Monday–Friday: 9am–6pm PST<br>Weekend: 10am–4pm PST</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">💬</div>
+        <div>
+          <h4>Response Time</h4>
+          <p>We respond to all enquiries<br>within 24 business hours.</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">🌐</div>
+        <div>
+          <h4>Social Media</h4>
+          <p>Follow us @WanderLust for<br>travel inspiration &amp; deals.</p>
+        </div>
+      </div>
+
+      <!-- Info card -->
+      <div style="background:var(--navy);border-radius:var(--radius-lg);padding:28px;margin-top:32px;color:var(--white);">
+        <div style="font-size:1.5rem;margin-bottom:10px;">✈️</div>
+        <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:8px;">Emergency Travel Support</h3>
+        <p style="opacity:.75;font-size:.9rem;line-height:1.6;">Travelling and need urgent help? Our 24/7 emergency line is available to all active WanderLust travellers via the contact form below.</p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-card">
+      <h2>Send Us a Message</h2>
+
+      <div id="formFields">
+        <!-- Netlify Contact Form — admin email configured in Netlify dashboard only, NOT visible here -->
+        <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Full Name *</label>
+              <input type="text" id="contactName" name="name" class="form-control" placeholder="Your full name" required data-testid="input-contact-name" />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address *</label>
+              <input type="email" id="contactEmail" name="email" class="form-control" placeholder="you@example.com" required data-testid="input-contact-email" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contactSubject">Subject *</label>
+            <select id="contactSubject" name="subject" class="form-control" required data-testid="select-subject">
+              <option value="">— Select a subject —</option>
+              <option value="booking-enquiry">Booking Enquiry</option>
+              <option value="destination-info">Destination Information</option>
+              <option value="group-travel">Group Travel</option>
+              <option value="special-occasion">Special Occasion</option>
+              <option value="cancellation">Cancellation / Refund</option>
+              <option value="complaint">Feedback / Complaint</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contactPhone">Phone Number (optional)</label>
+            <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="+1 (555) 000-0000" data-testid="input-contact-phone" />
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Your Message *</label>
+            <textarea id="contactMessage" name="message" class="form-control" rows="5" placeholder="Tell us how we can help you..." required style="resize:vertical;" data-testid="textarea-message"></textarea>
+          </div>
+
+          <div style="background:var(--off-white);border-radius:10px;padding:14px;margin-bottom:20px;font-size:.82rem;color:var(--gray-600);display:flex;align-items:flex-start;gap:8px;">
+            <span style="font-size:1rem;">🔒</span>
+            <span>Your message is sent securely. Your contact information is only used to respond to your enquiry and is never shared with third parties or displayed publicly.</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" data-testid="button-contact-submit" style="width:100%;justify-content:center;">
+            Send Message →
+          </button>
+        </form>
+      </div>
+
+      <!-- Success State -->
+      <div id="formSuccess" class="form-success" style="display:none;">
+        <div class="success-emoji">🎉</div>
+        <h3>Message Sent!</h3>
+        <p>Thanks for reaching out! Our team will review your message and get back to you within 24 hours.</p>
+        <a href="/" class="btn btn-navy" style="margin-top:20px;">Back to Home</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="section" style="background:var(--gray-100);padding-top:60px;">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Common Questions</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div style="max-width:740px;margin:0 auto;">
+      <details style="background:var(--white);border-radius:var(--radius);padding:20px 24px;margin-bottom:12px;box-shadow:var(--shadow-sm);cursor:pointer;">
+        <summary style="font-weight:700;color:var(--navy);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          How do I cancel or modify my booking? <span>▼</span>
+        </summary>
+        <p style="margin-top:12px;color:var(--gray-600);font-size:.9rem;line-height:1.7;">You can cancel or modify most bookings up to 48 hours before your check-in date at no charge. For changes within 48 hours, please contact our support team directly via this contact form.</p>
+      </details>
+      <details style="background:var(--white);border-radius:var(--radius);padding:20px 24px;margin-bottom:12px;box-shadow:var(--shadow-sm);cursor:pointer;">
+        <summary style="font-weight:700;color:var(--navy);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          When will I receive my booking confirmation? <span>▼</span>
+        </summary>
+        <p style="margin-top:12px;color:var(--gray-600);font-size:.9rem;line-height:1.7;">Your booking is confirmed instantly and appears in your My Tickets page right away. You can also view all your trip details there at any time.</p>
+      </details>
+      <details style="background:var(--white);border-radius:var(--radius);padding:20px 24px;margin-bottom:12px;box-shadow:var(--shadow-sm);cursor:pointer;">
+        <summary style="font-weight:700;color:var(--navy);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Are there any hidden fees? <span>▼</span>
+        </summary>
+        <p style="margin-top:12px;color:var(--gray-600);font-size:.9rem;line-height:1.7;">Never. The price you see on the booking page is the final price — it includes all taxes and fees. Our Best Price Promise means no surprises at checkout.</p>
+      </details>
+      <details style="background:var(--white);border-radius:var(--radius);padding:20px 24px;margin-bottom:12px;box-shadow:var(--shadow-sm);cursor:pointer;">
+        <summary style="font-weight:700;color:var(--navy);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Can I book for a group? <span>▼</span>
+        </summary>
+        <p style="margin-top:12px;color:var(--gray-600);font-size:.9rem;line-height:1.7;">Absolutely! For groups of 6 or more, we offer special group rates and dedicated planning assistance. Please use the contact form above and select "Group Travel" as the subject.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Wander<span>Lust</span></h3>
+        <p>Making world travel accessible, affordable and unforgettable.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="/destinations.html">All Destinations</a>
+        <a href="/bookings.html">Book a Trip</a>
+        <a href="/tickets.html">My Tickets</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/contact.html">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="/contact.html">Help Centre</a>
+        <a href="#">FAQs</a>
+        <a href="#">Cancellations</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderLust. All rights reserved.</span>
+      <span>Made with ❤️ for explorers everywhere</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>

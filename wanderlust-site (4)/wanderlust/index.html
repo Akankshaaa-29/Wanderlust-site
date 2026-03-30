@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WanderLust — Discover Your Next Adventure</title>
+  <meta name="description" content="Explore breathtaking destinations, create unforgettable memories, and travel the world with confidence." />
+  <meta property="og:title" content="WanderLust — Travel & Booking" />
+  <meta property="og:description" content="Discover your next adventure with WanderLust." />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- NAV (white) -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <span class="brand-name">Wander<span class="brand-accent">Lust</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/destinations.html">Destinations</a></li>
+      <li><a href="/bookings.html">Bookings</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/bookings.html" class="btn-nav">Book Now</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="/">Home</a>
+    <a href="/destinations.html">Destinations</a>
+    <a href="/bookings.html">Bookings</a>
+    <a href="/tickets.html">My Tickets</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/bookings.html" class="btn-mobile">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO — Full-width centered -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Discover Your Next <span class="accent">Adventure</span></h1>
+    <p class="hero-subtitle">Explore breathtaking destinations, create unforgettable memories, and travel the world with confidence.</p>
+
+    <!-- Inline search bar -->
+    <div class="hero-search">
+      <div class="search-field">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="heroDestInput" placeholder="Where do you want to go?" />
+      </div>
+      <div class="search-field">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <input type="date" id="heroDate" />
+      </div>
+      <div class="search-field">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <select id="heroGuests">
+          <option value="1">1 Guest</option>
+          <option value="2" selected>2 Guests</option>
+          <option value="3">3 Guests</option>
+          <option value="4">4+ Guests</option>
+        </select>
+      </div>
+      <button class="hero-search-btn" id="heroSearchBtn">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        Search
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- TRENDING DESTINATIONS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-header-text">
+        <span class="section-label">Trending Now</span>
+        <h2 class="section-title">Trending Destinations</h2>
+        <p class="section-subtitle">Discover the most popular places our travelers are booking right now.</p>
+      </div>
+      <a href="/destinations.html" class="view-all">View all →</a>
+    </div>
+
+    <div class="cards-grid">
+      <!-- Paris -->
+      <div class="dest-card animate-up" onclick="location.href='/bookings.html?dest=paris'">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80" alt="Paris" loading="lazy">
+          <div class="card-rating-chip"><span class="star">★</span> 4.9</div>
+        </div>
+        <div class="card-body">
+          <div class="card-country">France</div>
+          <div class="card-title">Paris</div>
+          <div class="card-desc">Experience the city of light, love, and iconic landmarks like the Eiffel Tower.</div>
+          <div class="card-footer">
+            <div>
+              <div class="card-price-label">Starting from</div>
+              <div class="card-price-amount">$1,299</div>
+            </div>
+            <a href="/bookings.html?dest=paris" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bali -->
+      <div class="dest-card animate-up" onclick="location.href='/bookings.html?dest=bali'">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80" alt="Bali" loading="lazy">
+          <div class="card-rating-chip"><span class="star">★</span> 4.8</div>
+        </div>
+        <div class="card-body">
+          <div class="card-country">Indonesia</div>
+          <div class="card-title">Bali</div>
+          <div class="card-desc">A tropical paradise known for its forested volcanic mountains and beautiful beaches.</div>
+          <div class="card-footer">
+            <div>
+              <div class="card-price-label">Starting from</div>
+              <div class="card-price-amount">$899</div>
+            </div>
+            <a href="/bookings.html?dest=bali" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- New York -->
+      <div class="dest-card animate-up" onclick="location.href='/bookings.html?dest=newyork'">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&q=80" alt="New York" loading="lazy">
+          <div class="card-rating-chip"><span class="star">★</span> 4.7</div>
+        </div>
+        <div class="card-body">
+          <div class="card-country">USA</div>
+          <div class="card-title">New York</div>
+          <div class="card-desc">The city that never sleeps, offering endless culture, food, and entertainment.</div>
+          <div class="card-footer">
+            <div>
+              <div class="card-price-label">Starting from</div>
+              <div class="card-price-amount">$1,099</div>
+            </div>
+            <a href="/bookings.html?dest=newyork" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tokyo -->
+      <div class="dest-card animate-up" onclick="location.href='/bookings.html?dest=tokyo'">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80" alt="Tokyo" loading="lazy">
+          <div class="card-rating-chip"><span class="star">★</span> 4.9</div>
+        </div>
+        <div class="card-body">
+          <div class="card-country">Japan</div>
+          <div class="card-title">Tokyo</div>
+          <div class="card-desc">A mesmerizing mix of the ultramodern and the traditional, from neon-lit skyscrapers to historic temples.</div>
+          <div class="card-footer">
+            <div>
+              <div class="card-price-label">Starting from</div>
+              <div class="card-price-amount">$1,499</div>
+            </div>
+            <a href="/bookings.html?dest=tokyo" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Santorini -->
+      <div class="dest-card animate-up" onclick="location.href='/bookings.html?dest=santorini'">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80" alt="Santorini" loading="lazy">
+          <div class="card-rating-chip"><span class="star">★</span> 4.8</div>
+        </div>
+        <div class="card-body">
+          <div class="card-country">Greece</div>
+          <div class="card-title">Santorini</div>
+          <div class="card-desc">Stunning sunsets and iconic white-washed, blue-domed houses overlooking the Aegean Sea.</div>
+          <div class="card-footer">
+            <div>
+              <div class="card-price-label">Starting from</div>
+              <div class="card-price-amount">$1,399</div>
+            </div>
+            <a href="/bookings.html?dest=santorini" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maldives -->
+      <div class="dest-card animate-up" onclick="location.href='/bookings.html?dest=maldives'">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80" alt="Maldives" loading="lazy">
+          <div class="card-rating-chip"><span class="star">★</span> 5.0</div>
+        </div>
+        <div class="card-body">
+          <div class="card-country">Maldives</div>
+          <div class="card-title">Maldives</div>
+          <div class="card-desc">Overwater bungalows and crystal lagoons — the ultimate escape in the Indian Ocean.</div>
+          <div class="card-footer">
+            <div>
+              <div class="card-price-label">Starting from</div>
+              <div class="card-price-amount">$2,199</div>
+            </div>
+            <a href="/bookings.html?dest=maldives" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px;">
+      <a href="/destinations.html" class="btn btn-ghost btn-lg">View all destinations →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY BOOK WITH US -->
+<section class="section why-section">
+  <div class="section-inner">
+    <div class="section-header-center">
+      <span class="section-label">Our Promise</span>
+      <h2 class="section-title">Why Book With Us?</h2>
+      <p class="section-subtitle">We provide premium travel experiences tailored to your desires, ensuring every journey is seamless and unforgettable.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card animate-up">
+        <div class="feature-icon-wrap">🧭</div>
+        <h3 class="feature-title">Expert Guides</h3>
+        <p class="feature-text">Our local experts ensure you experience the authentic culture and hidden gems of every destination.</p>
+      </div>
+      <div class="feature-card animate-up">
+        <div class="feature-icon-wrap">💰</div>
+        <h3 class="feature-title">Best Prices</h3>
+        <p class="feature-text">We guarantee the most competitive rates without compromising on quality or experience.</p>
+      </div>
+      <div class="feature-card animate-up">
+        <div class="feature-icon-wrap">📞</div>
+        <h3 class="feature-title">24/7 Support</h3>
+        <p class="feature-text">Our dedicated support team is available round-the-clock to assist you anywhere in the world.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testi-section">
+  <div class="section-inner">
+    <div class="section-header-center">
+      <span class="section-label">Travelers Love Us</span>
+      <h2 class="section-title">What Our Travelers Say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card animate-up">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">The safari in Kenya was breathtaking. Every detail was perfectly organized, allowing us to just focus on the incredible wildlife.</p>
+        <div class="testi-author">
+          <img class="testi-avatar-img" src="https://i.pravatar.cc/150?u=sarah" alt="Sarah Jenkins" loading="lazy">
+          <div>
+            <div class="testi-name">Sarah Jenkins</div>
+            <div class="testi-role">Adventure Enthusiast</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card animate-up">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Our trip to the Maldives exceeded all expectations. The seamless booking process made planning our honeymoon completely stress-free.</p>
+        <div class="testi-author">
+          <img class="testi-avatar-img" src="https://i.pravatar.cc/150?u=michael" alt="Michael Chen" loading="lazy">
+          <div>
+            <div class="testi-name">Michael Chen</div>
+            <div class="testi-role">Honeymooner</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card animate-up">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">WanderLust helped me plan my solo trip across Europe. The recommendations were spot-on and the 24/7 support gave me peace of mind.</p>
+        <div class="testi-author">
+          <img class="testi-avatar-img" src="https://i.pravatar.cc/150?u=emma" alt="Emma Thompson" loading="lazy">
+          <div>
+            <div class="testi-name">Emma Thompson</div>
+            <div class="testi-role">Solo Traveler</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2 class="cta-title">Ready for Your Next Adventure?</h2>
+    <p class="cta-subtitle">Join thousands of happy travelers who discovered their perfect getaway with WanderLust.</p>
+    <div class="cta-btns">
+      <a href="/destinations.html" class="btn btn-white btn-lg">Explore Destinations</a>
+      <a href="/contact.html" class="btn btn-ghost-white btn-lg">Talk to an Expert</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Wander<span>Lust</span></h3>
+        <p>Making world travel accessible, affordable and unforgettable. Your journey begins with us.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="/destinations.html">All Destinations</a>
+        <a href="/bookings.html">Book a Trip</a>
+        <a href="/tickets.html">My Tickets</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/contact.html">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <h4>Top Destinations</h4>
+        <a href="/bookings.html?dest=paris">Paris</a>
+        <a href="/bookings.html?dest=bali">Bali</a>
+        <a href="/bookings.html?dest=tokyo">Tokyo</a>
+        <a href="/bookings.html?dest=maldives">Maldives</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WanderLust. All rights reserved.</span>
+      <span>Made with ❤️ for explorers everywhere</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+<script>
+  // Hero search redirects to bookings
+  document.getElementById('heroSearchBtn').addEventListener('click', () => {
+    window.location.href = '/bookings.html';
+  });
+</script>
+</body>
+</html>
